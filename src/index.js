@@ -25,6 +25,8 @@ function NoteraTransportRollbar (opts) {
     if (err) args.push(err)
     if (meta) args.push(meta)
 
+    // TODO: Turn this into an async transport using callback
+
     const logFunc = opts.rollbar[levelMap[level]]
     logFunc.apply(opts.rollbar, args)
   }
